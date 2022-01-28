@@ -1,0 +1,274 @@
+:root{
+    --black_alpha_16: rgba(0, 0, 0, 0.699);
+    --black_alpha_40: rgba(36, 36, 36, 0.918);
+    --btn-color: rgb(14, 44, 85);    
+    --def-color: rgb(200, 208, 255);
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+html{
+    font-size: 20px;
+}
+body{
+    margin: 0;
+    background-image: url("Space_A_lot_of_stars_in_space_082009_.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+    background-color: rgb(2, 2, 12);
+}
+header {
+    height: 98vh;
+    color: var(--font-color);
+}
+.cover{
+    height: 99%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{    
+    height: 20%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    color: var(--def-color);
+}
+.main img{
+    width: 33px;
+    height: 210px;
+}
+
+h1{
+    margin-top: 0;
+    font-size: 44px;
+    font-weight: 900;
+}
+p{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.main-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    justify-content: flex-end;
+    background-color: rgb(7, 12, 29);
+    margin: 0;
+    height: 1.5rem;
+    padding-right: 2rem;
+}
+.main-menu a{
+    text-decoration: none;
+    color: var(--def-color);
+}
+
+.order-section{
+    padding: 5rem;
+    text-align: center;
+}
+.card-container{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card{
+    height: 300px;
+    width: 250px;
+    box-shadow: 0 2px 20px var(--black_alpha_16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--def-color);
+    border-radius: 5px;
+}
+.card:hover{
+    box-shadow: 0 10px 35px var(--black_alpha_40);
+}
+.card img{
+    width: 100%;
+}
+.card-btn, .btn{    
+    border: 1px solid var(--btn-color);
+    border-radius: 5px;
+    color: var(--font-color);
+    font-size: 15px;
+    background-color: var(--def-color);
+    width: 80%;
+    height: 40px;
+    transition: all .3s;
+}
+.card-btn:hover, .btn:hover{
+    background-color: var(--btn-color);
+    color: rgb(205, 219, 255);
+}
+h2{
+    color: rgb(223, 219, 255);
+}
+.btn{
+    width: fit-content;
+    padding: 0 2rem;
+    font-size: 20px;
+    flex-direction:row;
+}
+.btns{
+    padding-top: 6rem;
+}
+
+.block-tx{
+    
+    font-size: 24px;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    padding-left: 1rem;
+}
+.block-tx img{
+    width: 55px;
+    height: 270px;
+}
+p1, p2{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;  
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    gap: 0.5rem;
+}
+.text img{
+    width: 100%;
+    height: 30px;
+}
+.idea-section{
+    color: var(--def-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.idea{    
+    display: flex;
+    padding: 2rem;
+    gap: 7rem;
+}  
+h3{
+    font-size: 35px;
+    font-weight: 900;
+}
+.look{
+    padding: 1rem;
+    background-color: rgba(12, 29, 59, 0.582);
+    border-radius: 6px;
+}
+.look img{
+    width: 12rem;
+    height: 24rem;
+    border-radius: 5px;
+}
+
+h4{
+    font-size: 35px;
+    font-weight: 900;
+    color: var(--def-color);
+}
+.contact{
+    font-size: 25px;
+    color: var(--def-color);
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+
+    background-color: rgba(12, 29, 59, 0.582);
+    border-radius: 15px;
+}
+.contact img{
+    height: 500px;
+    width: 33px;
+}
+p a{
+    font-size: 25px;
+    color: var(--def-color);
+}
+.connect{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap: 3rem;
+}
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+}
+.con-text{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.con-text img{
+    width: 107%;
+    height: 30px;
+}
+
+#choice:target { 
+    display: block;
+}    
+#choice {    
+    background: rgba(102, 102, 102, 0.68);    
+    width: 100%;    
+    height: 100%;    
+    position: fixed;    
+    top: 0;    
+    left: 0;    
+    display: none;    
+    z-index: 9999999999; 
+}    
+window {    
+    position: absolute;    
+    top: 50%;    
+    left: 50%;    
+    width: 400px;
+    border-radius: 7px;   
+    padding: 50px;    
+    transform: translate(-50%,-50%);    
+    background-color: rgb(226, 230, 255);
+    color: var(--btn-color);
+}    
+a.close_window {    
+    position: absolute;    
+    right: 10px;    
+    top: 4px;  
+    text-decoration: none;
+    color: var(--btn-color);
+}

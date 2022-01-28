@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutFit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="image_src" href="/images/interactive_3d.png" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.interactive_3d.js"></script>
+    <script>
+        $(document).ready( function() {
+            $("#interactive_3d").interactive_3d({
+                frames: 42, 
+                cursor: "move", 
+                speed: 0, 
+                entrance: true, 
+                preloadImages: true, 
+                touchSupport: true, 
+                loading: "Loading..", 
+                autoPlay: false
+            });   
+        });      
+    </script>
+</head>
+<body>    
+    <header class="header">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#idea">Идея</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="cover">
+            <div class = "main">
+                <img src= "img/line2.png" alt = "">
+                <div class = "text">
+                    <img src= "img/line.png" alt = "">
+                    <h1>Watch your OUTFIT!</h1>                  
+                    <p>3D-model for your boutique</p>       
+                    <img src= "img/line.png" alt = "">
+                </div>
+                <img src= "img/line2.png" alt = "">
+            </div>            
+            <div class = "btns">
+                <button class="btn" id="btn-idea">Идея</button> 
+                <button class="btn" id="btn-opros">Опрос</button> 
+                <button class="btn" id="btn-contact">Контакты</button> 
+            </div>       
+        </div>       
+    </header>  
+
+    <section class="idea-section">
+        <a name="idea"></a>
+        <h3>Что мы предлагаем?</h3>
+        <div class = "idea">
+            <div class = "block-tx">
+                <img src= "img/line2.png" alt = "">
+                <div class = "text">
+                    <img src= "img/line.png" alt = "">
+                    <p1>Наша идея состоит в создании онлайн-примерочной для интернет-магазинов и ателье с 3D-моделированием человеческого тела.</p1>
+                    <img src= "img/line.png" alt = "">
+                    <p2>Блaгодаря данной технологии Вы сможете увеличить комфорт шоппинга на Вашей платформе, а также снизить вероятность возвратов.</p2>
+                    <img src= "img/line.png" alt = "">
+                </div>
+                <img src= "img/line2.png" alt = "">
+            </div>
+            <div class = "look">
+                <div id="interactive_3d">
+                    <img src="images/frame_1.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="order-section">
+        <h2>Ваше мнение о нашем проекте?</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/wow.png" alt="">
+                <div class="card-desc">Отличная идея</div>
+                <button class="card-btn" onclick="location.hash ='choice'">✔</button>
+            </div>
+            <div class="card">
+                <img src="img/norm.png" alt="">
+                <div class="card-desc">Неплохой концепт</div>
+                <button class="card-btn" onclick="location.hash ='choice'">✔</button>
+            </div>
+            <div class="card">
+                <img src="img/bad.png" alt="">
+                <div class="card-desc">Плохая задумка</div>
+                <button class="card-btn" onclick="location.hash ='choice'">✔</button>
+            </div>
+            <div class="card">
+                <img src="img/not.png" alt="">
+                <div class="card-desc">Мне не интересно</div>
+                <button class="card-btn" onclick="location.hash ='choice'">✔</button>
+            </div>
+            <div class="card">
+                <img src="img/quest.png" alt="">
+                <div class="card-desc">Остались вопросы</div>
+                <button class="card-btn" id="btn-quest">✔</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="choice">
+        <window>
+            <a href="#close_window" class="close_window">✖</a>
+            Спасибо за Ваше мнение!
+        </window>
+    </div>
+
+    <section class = "contact-section">
+        <a name="contact"></a>
+        <h4>Вы можете связаться с нами</h4>
+        <div class = "contact">
+            <img src= "img/line2.png" alt = "">
+            <div class = "con-text">
+                <img src= "img/line.png" alt = "">
+                <form name="Данные пользователя">
+                    <label for="name">Введите ваше имя</label>
+                    <input type="text" placeholder="Имя" id="name" name="name"/>
+                    
+                    <br />
+                    <br />
+                    
+                    <label for="number">Введите номер телефона</label>
+                    <input type="tel" placeholder="Номер" maxlength="11" id="number" name="number"/>
+                    
+                    <br />
+                    <br />
+                    
+                    <label for="time">Укажите удобное время, наш оператор свяжется с вами</label>
+                    <input type="time" id="time" name="time" />
+                    
+                    <br />
+                    <br />
+                    <label for="com">Вопросы</label>
+                    <br />
+                    <textarea placeholder="Комментарий">
+                    </textarea>
+                    <br />
+                    
+                    <input type="button" value="Отправить данные" />
+                    <input type="reset" value="Очистить данные" />
+                </form>
+                <label>Контакты:</label>
+                <div class = "connect">
+                    <p><a href="https://vk.com/sugar_keksik" target="_blank"title="Разработчик">Анна</a></p>
+                    <p><a href="https://vk.com/ur_night_mare" target="_blank" title="Дизайнер">Полина</a></p>
+                    <p><a href="mailto:anakovaleva026@gmail.com">Написать на почту</a></p>
+                </div>
+                <img src= "img/line.png" alt = "">                
+            </div>
+            <img src= "img/line2.png" alt = "">
+        </div>
+    </section>  
+
+    <script src="script.js"></script>
+</body>
+</html>
